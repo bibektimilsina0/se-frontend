@@ -13,7 +13,35 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+### register:
+ {"name": "Bibek",
+    "email":"@email.com",
+    "password":"",
+    "confirmPassword":"",
+    "role":"user",
+    "address":"parbat",
+    "country":"nepal"}
+### create campaign
+{
+title:real money
+goal:10000
+story:i need $1000
+category:Child
+FundraisingPeriod:12
+img : ,
 
+}
+### credential
+{Name:bibek
+DOB:2002-02-10
+Age:21
+documentType:Birth Certificate
+images: 
+}
+#### filter
+by category ,by creator name,by progress
+### search
+by title name
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
