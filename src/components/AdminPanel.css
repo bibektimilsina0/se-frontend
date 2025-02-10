@@ -1,0 +1,140 @@
+.adminContainer {
+    padding: 7.5rem 0;
+    background: black;
+}
+
+.adminseccontainer {
+    border: 0;
+    border-radius: 8px;
+    width: 20rem;
+    height: auto;
+    margin: 2rem auto;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 0px 8px 1px rgb(214, 214, 214);
+}
+
+.adminNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: whitesmoke;
+    border: 1px solid transparent;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    height: auto;
+    box-shadow: 0rem 0rem 1rem 0rem white;
+}
+
+#jobs2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.AdminCampaign .container {
+    margin-left: 1rem;
+    background: rgb(225, 223, 223);
+}
+
+.adminLogo {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.AdminlogoText {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.AdminlogoText span {
+    color: red;
+    position: relative;
+    right: 0.4rem;
+}
+
+.AdminimgLogo .Img {
+    height: 2.5rem;
+}
+
+.adminSearchBox {
+    display: flex;
+    align-items: center;
+}
+
+.adminSearch {
+    width: 17rem;
+}
+
+#mySearch {
+    width: 100%;
+    height: 3rem;
+    padding: 0rem 1rem;
+    color: black;
+    border: 1.5px solid black;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.adminSearchIcon {
+    padding: 0.75rem 0.8rem;
+    border: 1.5px solid black;
+    border-left-style: hidden;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background: rgb(83, 83, 83);
+}
+
+.adminSearchIcon:focus {
+    border: none;
+}
+
+.adminSearchIcon .fa-search {
+    color: white;
+}
+
+.Adminbtn {
+    display: flex;
+}
+
+.btnAccept input {
+    margin: 1rem 1.4rem;
+    width: 7rem;
+    border: 0;
+    font-size: 1.1rem;
+    background-color: rgb(61, 61, 204);
+    color: white;
+    padding: 0.5rem 0;
+}
+
+.btnCredential input {
+    margin: 1rem;
+    width: 7rem;
+    border: 0;
+    font-size: 1.1rem;
+    background-color: rgb(152, 33, 33);
+    color: white;
+    padding: 0.5rem 0;
+}
+
+.adminBtnHome button {
+    padding: 1rem 1rem;
+    position: relative;
+    left: 80%;
+    margin-top: 1rem;
+    background: rgb(28, 28, 227);
+    font-size: 1rem;
+    border: 0;
+}
+
+.adminBtnHome button:hover {
+    background: rgb(2, 2, 245);
+}
+
+#adminBtnLink {
+    text-decoration: none;
+    color: white;
+}

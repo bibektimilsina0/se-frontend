@@ -1,0 +1,38 @@
+.HomepageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#HomepageContent {
+    display: flex;
+    height: 100vh;
+    padding: 7rem 0;
+    justify-content: space-around;
+    background-image: url("./Images/HomepageBackground.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+}
+#btn{
+    text-decoration: none;
+    color:white;
+}
+#adminpanel button {
+    padding: 0.8rem 1.3rem;
+    border: 0;
+    background: blue;
+    color: white;
+}
+
+article {
+    margin: 5rem 0 0 0rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-family: monospace;
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-align: center;
+    width: 45%;
+    position: relative;
+    right: 1rem;
+}

@@ -1,0 +1,83 @@
+#Loginform {
+    width: 30rem;
+    border-radius: 10px;
+    background-color: rgb(225, 219, 219);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.3rem auto;
+    padding: 1.3rem 0.7rem;
+    box-shadow: 0px 0px 1px 0px rgb(214, 214, 214), -0px -0px 1px 0px rgb(214, 214, 214);
+}
+
+#Loginform input[value="Create new account"] {
+    width: 11em;
+    height: 2.6em;
+    background-color: orangered;
+    border: 0;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+#Loginform input[value="Create new account"]:hover {
+    background-color: rgb(221, 99, 55);
+    transform: scale(1.04);
+}
+
+#Login {
+    width: 20em;
+    height: 2.6em;
+    background-color: #1b77f0;
+    color: white;
+    border: 0;
+    font-size: 1.17rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    transition: 0.4s ease;
+}
+
+#Login:hover {
+    background-color: #05489f;
+    transform: scale(1.04);
+}
+
+#Loginform input[type="text"],
+#Loginform input[type="password"] {
+    width: 22em;
+    height: 3em;
+    border: 1px solid white;
+    color: black;
+    background-color: rgb(251, 251, 251);
+    font-size: 1.17rem;
+    padding-left: 15px;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+#Loginform input[type="placeholder"] {
+    color: white;
+}
+
+.horizontal_line {
+    height: 1px;
+    width: 25em;
+    background-color: rgb(81, 81, 81);
+}
+
+#Loginform p {
+    margin-bottom: 1.5em;
+}
+
+#Loginform p a {
+    text-decoration: none;
+    color: #066df3;
+}
+
+#Loginform p a:hover {
+    border-bottom: 1.5px solid black;
+}
