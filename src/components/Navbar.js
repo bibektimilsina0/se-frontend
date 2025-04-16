@@ -3,7 +3,7 @@ import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 function Navbar() {
-    const url=`https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/campaign`
+    const url=`https://software-engineering-project-ja6n.onrender.com/api/v1/campaign`
   
     const navigate=useNavigate()
     const [filter,setFilter]=useState('')

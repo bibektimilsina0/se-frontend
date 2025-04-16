@@ -11,7 +11,7 @@ const initialFormData = {
 };
 
 function CampaignHello() {
-    const url = 'https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/campaign'
+    const url = 'https://software-engineering-project-ja6n.onrender.com/api/v1/campaign'
   const navigate=useNavigate()
   const [formData, setFormData] = useState(initialFormData);
   const [file,setFile]=useState();

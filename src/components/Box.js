@@ -44,7 +44,7 @@ import Navbar from './Navbar';
 /* import { useLocation } from "react-router-dom"; */
 
 function Campaign() {
-    const url = 'https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/campaign';
+    const url = 'https://software-engineering-project-ja6n.onrender.com/api/v1/campaign';
     const [campaigns, setCampaigns] = useState([])
  const navigate=useNavigate()
  

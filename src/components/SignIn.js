@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import { useNavigate } from 'react-router-dom';
 
 function SignIn(){
-    const url = 'https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/auth/register'
+    const url = 'https://software-engineering-project-ja6n.onrender.com/api/v1/auth/register'
    const navigate=useNavigate()
     const initialFormData = {
         name: '',

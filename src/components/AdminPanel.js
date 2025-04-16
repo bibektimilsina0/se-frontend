@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 
 function AdminPanel() {
-    const url = 'https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/pendingcampaign';
+    const url = 'https://software-engineering-project-ja6n.onrender.com/api/v1/pendingcampaign';
     const [campaigns, setCampaigns] = useState([])
     const [searchTerm,setSearchTerm]=useState('')
 
@@ -29,7 +29,7 @@ function AdminPanel() {
 
  const handleaccept=(id,e)=>{
     e.preventDefault();
-    const updateurl=`https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/campaign/${id}`;
+    const updateurl=`https://software-engineering-project-ja6n.onrender.com/api/v1/campaign/${id}`;
     try {
          const jsonData={
             status:"Approved"
@@ -60,7 +60,7 @@ function AdminPanel() {
  
  const handleCredential=(id,e)=>{
     e.preventDefault();
-    const updateurl=`https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/campaign/${id}/credentials`;
+    const updateurl=`https://software-engineering-project-ja6n.onrender.com/api/v1/campaign/${id}/credentials`;
     try {
           
         fetch(updateurl, {
@@ -81,7 +81,7 @@ function AdminPanel() {
  }
  const handleSearch=(e)=>{
     e.preventDefault()
-    const searchurl = `https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/pendingcampaign?name=${searchTerm}`;
+    const searchurl = `https://software-engineering-project-ja6n.onrender.com/api/v1/pendingcampaign?name=${searchTerm}`;
         try {
             fetch(searchurl, {
                 method: 'GET',

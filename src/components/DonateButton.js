@@ -25,7 +25,7 @@ function DonateButton({campaignId}) {
         onComplete: function (params) {
           // Handle successful payment
           try{ 
-            const url=`https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/payment/${campaignId}/onsuccess`
+            const url=`https://software-engineering-project-ja6n.onrender.com/api/v1/payment/${campaignId}/onsuccess`
             fetch(url, {
                 method: 'PATCH',
                 headers: {

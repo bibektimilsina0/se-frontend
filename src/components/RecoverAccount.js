@@ -4,7 +4,7 @@ import './RecoverAccount.css'
 import { useNavigate } from 'react-router-dom'
 
 function RecoverAccount(){
-    const url = 'https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/auth/forgotpassword'; 
+    const url = 'https://software-engineering-project-ja6n.onrender.com/api/v1/auth/forgotpassword'; 
     const [email,setEmail]=useState('')
 
    const navigate=useNavigate()

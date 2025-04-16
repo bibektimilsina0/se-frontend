@@ -13,7 +13,7 @@ function Credential() {
     const uselocation=useLocation()
     const navigate=useNavigate()
     console.log(uselocation.state)
-    const url = `https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/campaign/
+    const url = `https://software-engineering-project-ja6n.onrender.com/api/v1/campaign/
     ${uselocation.state}/credentials`
     const [formData, setFormData] = useState(initialFormData);
     const [file,setFile]=useState();
