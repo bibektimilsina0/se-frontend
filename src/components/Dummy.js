@@ -1,18 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Toggle from './Toggle'
-
-function Register() {
-
-    const url = 'https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/auth/login'
-    const [username, setUsername] = useState('')
+import{useNavigate} from 'react-router-dom'
+function Login() {
+    const navigate=useNavigate()
+ 
+    // const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState("")
-    const [registered, setRegistered] = useState('')
-
+    const [userToken, setUserToken] = useState('')
+    const [userinfo,setUserinfo]=useState('')
+    useEffect(()=>{
+        localStorage.setItem('token',userToken)
+        localStorage.setItem('info',JSON.stringify(userinfo))
+    },[userToken,userinfo])
+    console.log(userinfo)
     const handleClick = (e) => {
         e.preventDefault();
         const jsonData = {
-            name: username,
             email: email,
             password: password
         }
@@ -27,35 +31,36 @@ function Register() {
                 body: JSON.stringify(jsonData)
             }).then((responce) => responce.json())
                 .then((data) => {
-                    console.log(data);
-                    const parent=document.getElementById('register')
-                   
-                    const user=document.createElement('div')
-                      if(!data.msg){
-                        user.innerHTML=`Hello ${data.user.name}<br/> Account created successfully!`
-                     parent.appendChild(user);
-                      }else{
-                          user.innerHTML=data.msg
-                         parent.appendChild(user);
-                      }
+                    console.log(data)
+                //     console.log(data.user.name);
                  
+                  const parent=document.getElementById('login')
+                  const user=document.createElement('div')
+                    if(!data.msg){
+                    user.innerHTML=`Hello ${data.user.name}<br/> Login successfully!`
+                   parent.appendChild(user);
+                   setUserToken(data.token)
+                   setUserinfo(data.user)
+                   setTimeout(()=>{
+                    navigate('/',{state:data.token})
+                   }, 4000);
+                    }else{
+                        user.innerHTML=data.msg
+                       parent.appendChild(user);
+                    }
+                  
                 })
         } catch (error) {
-            console.log(error);
+            console.log(`error: ${error}`);
         }
     }
     return (
 
-        <div className="text-center">
-            <div className='border mx-12 my-4 pb-4' id="register">
+        <div className="text-center ">
+            <div className='border mx-12 my-4 pb-4 ' id='login'>
                 <form className="form contact-form" onSubmit={(e) => handleClick(e)}>
-                    <h5 className="text-lg font-bold mb-4" >Register</h5>
-                    <div className="mb-4">
-                        <label htmlFor="username" className="block text-sm font-medium text-gray-700">Name</label>
-
-                        <input type="text" className="form-input username-input border" name="username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
-
-                    </div>
+                    <h5 className="text-lg font-bold mb-4">Login</h5>
+                 
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
 
@@ -70,8 +75,6 @@ function Register() {
                         submit
                     </button>
                   
-                    {/* <p id="user"></p> */}
-
                 </form>
             </div>
             <Toggle/>
@@ -79,4 +82,4 @@ function Register() {
     );
 }
 
-export default Register;
+export default Login;

@@ -1,0 +1,110 @@
+.FunddescContent {
+    position: absolute;
+    top: 0rem;
+    padding: 6.8rem 0 0 0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(214, 210, 210);
+}
+
+.funddescheader {
+    text-align: center;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.funddescmainBox {
+    margin: 1.5rem 0 3rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.donateFund {
+    padding: 1.2rem 4rem;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    margin: 0 0 1rem 0;
+    background-color: rgb(50, 182, 182);
+}
+
+.donateFund:hover {
+    background-color: rgb(4, 180, 249);
+}
+
+.spreadFund {
+    display: flex;
+    background: rgb(59, 59, 194);
+    padding: 1.2rem 1.8rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.spreadFund .fa-facebook-square {
+    margin-right: 0.7rem;
+    color: rgb(130, 158, 75);
+    font-size: 1.5rem;
+}
+
+.raisedFunddesc {
+    font-size: 2rem;
+}
+
+.goalFunddesc {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+.progressBarDesc {
+    height: 1rem;
+    background-color: rgb(36, 221, 221);
+    margin: 0 0 1rem 0;
+    border-radius: 12px;
+}
+
+.innerText {
+    background-color: red;
+    width: 3rem;
+    height: 1rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#imageBox {
+    width: 50%;
+}
+
+#imageBox img {
+    height: 25rem;
+}
+
+.timeleftFund {
+    font-size: 1.8rem;
+    color: blue;
+    font-weight: bold;
+}
+
+.AboutFundraiserdesc {
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.3rem auto;
+    padding: 2rem 0.7rem;
+    box-shadow: 0px 0px 2px 0px rgb(139, 121, 121), -0px -0px 2px 0px rgb(214, 214, 214);
+}
+
+.AboutFundraiserdesc h2 {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+    color: red;
+}

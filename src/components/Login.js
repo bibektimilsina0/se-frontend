@@ -1,17 +1,24 @@
+import React from 'react'
+import './Login.css'
+import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import Toggle from './Toggle'
 import{useNavigate} from 'react-router-dom'
+
 function Login() {
+
+    const url = 'https://software-engineering-project-ja6n.onrender.com/api/v1/auth/login'
     const navigate=useNavigate()
-    const url = 'https://dream-backers-crowdfunding-np.cyclic.cloud/api/v1/auth/login'
+ 
     // const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState("")
     const [userToken, setUserToken] = useState('')
-
+    const [userinfo,setUserinfo]=useState('')
     useEffect(()=>{
         localStorage.setItem('token',userToken)
-    },[userToken])
+        localStorage.setItem('info',JSON.stringify(userinfo))
+    },[userToken,userinfo])
+ 
     const handleClick = (e) => {
         e.preventDefault();
         const jsonData = {
@@ -35,11 +42,11 @@ function Login() {
                   const parent=document.getElementById('login')
                   const user=document.createElement('div')
                     if(!data.msg){
-                    user.innerHTML=`Hello ${data.user.name}<br/> Login successfully!`
-                   parent.appendChild(user);
-                   setUserToken(data)
+                 
+                   setUserToken(data.token)
+                   setUserinfo(data.user)
                    setTimeout(()=>{
-                    navigate('/',{state:data.token})
+                    navigate('/')
                    }, 4000);
                     }else{
                         user.innerHTML=data.msg
@@ -51,32 +58,31 @@ function Login() {
             console.log(`error: ${error}`);
         }
     }
-    return (
-
-        <div className="text-center ">
-            <div className='border mx-12 my-4 pb-4 ' id='login'>
-                <form className="form contact-form" onSubmit={(e) => handleClick(e)}>
-                    <h5 className="text-lg font-bold mb-4">Login</h5>
-                 
-                    <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-
-                        <input type="email" className="form-input username-input border" name="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="password" className="block text-sm font-medium text-gray-700">password</label>
-                        <input type="password" className="form-input password-input border" name="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
-                    </div>
-                    <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full">
-                        submit
-                    </button>
-                  
-                </form>
+  return (
+    <>
+        <form id="Loginform" onSubmit={(e) => handleClick(e)}>
+            <div className="Box">
+                <input type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email or phone number" />
             </div>
-            <Toggle/>
-        </div>
-    );
+            <div className ="Box">
+                <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+            </div>
+
+            <div>
+                <button type="submit" id="Login">Log in</button>
+            </div>
+            <p>
+                <Link to="./recover">Forgot password?</Link>
+            </p>
+            <div class="horizontal_line"></div>
+            <div>
+                <Link to="./signup">
+                    <input type="button" value="Create new account" />
+                </Link>
+            </div>
+        </form>
+    </>
+  )
 }
 
-export default Login;
+export default Login

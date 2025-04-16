@@ -1,0 +1,68 @@
+.signin-container {
+    width: 28rem;
+    margin: 9rem auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0rem 0rem 1rem 0rem rgb(207, 203, 203);
+}
+
+.logoImgSignIn img {
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    left: 40%;
+    margin: 0.5rem 0;
+}
+
+.SignUpheader {
+    text-align: center;
+    color: red;
+    margin: 0 0 1rem 0;
+}
+
+#SignUpForm {
+    display: grid;
+    gap: 10px;
+}
+
+#SignUpForm label {
+    font-weight: bold;
+    color: rgb(80, 80, 199);
+}
+
+#SignUpForm input[type="text"],
+#SignUpForm input[type="email"],
+#SignUpForm input[type="password"],
+#SignUpForm select,
+#SignUpForm textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 3rem;
+    margin: 0 0 1rem 0;
+}
+
+#SignUpForm select {
+    cursor: pointer;
+}
+
+#SignUpForm textarea {
+    resize: vertical;
+}
+
+#SignUpForm button {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#SignUpForm button:hover {
+    background-color: #0056b3;
+}
